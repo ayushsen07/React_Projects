@@ -1,8 +1,8 @@
 import React from 'react'
 import { useState } from 'react'
 
-function Nav() {
-    const [activeTab , setActiveTab] = useState('pizzas')
+function Nav({activeTab, setActiveTab}) {
+    
   return (
     <div className='my-3 flex border'>
         <div className={`w-[20%] text-center py-2 border-t-0 border-l-0 border-b-0 border ${activeTab==='pizzas' ? 'bg-red-400' : null}`} onClick={()=>setActiveTab('pizzas')} >Pizzas</div>

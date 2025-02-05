@@ -1,15 +1,17 @@
 import { useState } from 'react'
 import Header from './components/header/Header.jsx'
-import Nav from './components/header/nav/nav.jsx'
+import Nav from './components/nav/nav.jsx'
+import Info from './components/info/info.jsx'
 
 
 function App() {
-  const [count, setCount] = useState(0)
+  const [activeTab , setActiveTab] = useState('pizzas')
 
   return (
     <div className='w-[1200px] mx-auto p-4'>
       <Header/>
-      <Nav/>
+      <Nav activeTab={activeTab} setActiveTab={setActiveTab}/>
+      <Info activeTab={activeTab} />
     </div>
   )
 }
